@@ -146,3 +146,78 @@ body {
     height: auto;
     opacity: 0.9;
 }
+
+/* Tarjetas de Servicios con imagen superior */
+.service-media-card {
+    background-color: var(--bg-elevated);
+    border: 1px solid var(--border-subtle);
+    border-radius: 14px;
+    overflow: hidden;
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.service-media-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent-blue);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+.service-card-img {
+    height: 170px;
+    width: 100%;
+    object-fit: cover;
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.service-media-card .card-body {
+    padding: 1.5rem;
+}
+
+/* Insignias y botones de tarjetas de contacto */
+.badge-dark-accent {
+    background-color: rgba(61, 139, 253, 0.15);
+    color: var(--accent-blue);
+    border: 1px solid rgba(61, 139, 253, 0.35);
+    font-weight: 600;
+    padding: 5px 10px;
+    border-radius: 6px;
+}
+
+.service-card .btn-outline-primary {
+    color: var(--accent-blue);
+    border-color: var(--accent-blue);
+}
+
+.service-card .btn-outline-primary:hover {
+    background-color: var(--accent-blue);
+    color: #ffffff;
+}
+
+/* Integración de formularios y alertas al tema oscuro */
+.form-control {
+    background-color: var(--bg-elevated);
+    border: 1px solid var(--border-subtle);
+    color: var(--text-primary);
+    border-radius: 10px;
+}
+
+.form-control:focus {
+    background-color: var(--bg-elevated);
+    border-color: var(--accent-blue);
+    color: var(--text-primary);
+    box-shadow: 0 0 0 0.2rem rgba(61, 139, 253, 0.2);
+}
+
+.alert-info {
+    background-color: rgba(61, 139, 253, 0.12);
+    border-color: rgba(61, 139, 253, 0.35);
+    color: var(--text-primary);
+    border-radius: 10px;
+}
+
+.alert-danger {
+    background-color: rgba(220, 53, 69, 0.15);
+    border-color: rgba(220, 53, 69, 0.4);
+    color: #f8b4b4;
+    border-radius: 10px;
+}

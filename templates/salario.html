@@ -2,20 +2,20 @@
 
 {% block content %}
 <div class="portal-card-wrapper mb-4">
-    <h1>Bienvenido al apartado de <strong>Salarios</strong></h1>
-    <p class="portal-subtitle">Aquí podrás hacer los cálculos de los salarios conforme a las horas y los pagos por horas.</p>
+    <h1>Cálculo de <strong>Salario</strong></h1>
+    <p class="portal-subtitle">Ingresa las horas trabajadas y el pago por hora.</p>
 
-    <form method="POST" action="{{ url_for('compra') }}">
+    <form method="POST" action="{{ url_for('salario') }}">
         <div class="form-group">
-            <label for="cantidad">Cantidad:</label>
-            <input type="number" step="any" class="form-control" id="cantidad" name="cantidad" required>
+            <label for="horas">Horas trabajadas:</label>
+            <input type="number" step="any" class="form-control" id="horas" name="horas" required>
         </div>
         <div class="form-group">
-            <label for="precio">Precio unitario ($):</label>
-            <input type="number" step="any" class="form-control" id="precio" name="precio" required>
+            <label for="pago_hora">Pago por hora ($):</label>
+            <input type="number" step="any" class="form-control" id="pago_hora" name="pago_hora" required>
         </div>
         <button type="submit" class="btn btn-primary">
-            Calcular
+            Calcular Salario
         </button>
     </form>
 
@@ -27,9 +27,9 @@
 
     {% if total is not none %}
         <div class="alert alert-info mt-4">
-            <strong>Subtotal:</strong> ${{ subtotal }} |
-            <strong>Descuento:</strong> ${{ descuento }} |
-            <strong>Total:</strong> ${{ total }}
+            <strong>Horas normales:</strong> ${{ pago_normal }} |
+            <strong>Pago extra por horas:</strong> ${{ pago_extra }} |
+            <strong>Salario Total:</strong> ${{ total }}
         </div>
     {% endif %}
 </div>
