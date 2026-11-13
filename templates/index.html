@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="portal-card-wrapper mb-4">
+    <h1>Bienvenido al Portal de Servicios</h1>
+    <p class="portal-subtitle">Selecciona una opción del menú para consultar información o realizar cálculos.</p>
+
+    <div class="row">
+        <!-- Cuadro 1: Compra -->
+        <div class="col-12 col-md-4 mb-3 mb-md-0">
+            <div class="service-card">
+                <div class="service-icon">$</div>
+                <h5 class="service-title">Compra</h5>
+            </div>
+        </div>
+
+        <!-- Cuadro 2: Salario -->
+        <div class="col-12 col-md-4 mb-3 mb-md-0">
+            <div class="service-card">
+                <div class="service-icon">☰</div>
+                <h5 class="service-title">Salario</h5>
+            </div>
+        </div>
+
+        <!-- Cuadro 3: Temperatura -->
+        <div class="col-12 col-md-4">
+            <div class="service-card">
+                <div class="service-icon">°</div>
+                <h5 class="service-title">Temperatura</h5>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center">
+        <img src="{{ url_for('static', filename='static/img/Empresa.jpg') }}" class="img-fluid portal-banner-img" alt="Biblioteca" style="max-width: 785px;">
+    </div>
+</div>
+{% endblock %}

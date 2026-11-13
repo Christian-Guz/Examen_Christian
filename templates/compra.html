@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="portal-card-wrapper mb-4">
+    <h1>Bienvenido al apartado de <strong>Compras</strong></h1>
+    <p class="portal-subtitle">Aquí podrás hacer los cálculos de tus compras con la cantidad, precio unitario y tu descuento.</p>
+
+    <form method="POST" action="{{ url_for('compra') }}">
+        <div class="form-group">
+            <label for="cantidad">Cantidad:</label>
+            <input type="number" step="any" class="form-control" id="cantidad" name="cantidad" required>
+        </div>
+        <div class="form-group">
+            <label for="precio">Precio unitario ($):</label>
+            <input type="number" step="any" class="form-control" id="precio" name="precio" required>
+        </div>
+        <button type="submit" class="btn btn-primary">
+            Calcular
+        </button>
+    </form>
+
+    {% if error %}
+        <div class="alert alert-danger mt-4">
+            {{ error }}
+        </div>
+    {% endif %}
+
+    {% if total is not none %}
+        <div class="alert alert-info mt-4">
+            <strong>Subtotal:</strong> ${{ subtotal }} |
+            <strong>Descuento:</strong> ${{ descuento }} |
+            <strong>Total:</strong> ${{ total }}
+        </div>
+    {% endif %}
+</div>
+{% endblock %}
