@@ -1,4 +1,4 @@
-## Funcionamiento de la aplicación Web con Flask
+## Funcionamiento de la aplicación Web con Flask.
 
 El programa presente funciona desde que el usuario escribe en un navegador web el URL correspondiente de la página en donde incluye la **dirección IP** y el del **servidor** junto con el **puerto** donde se encuentra el programa, generando una petición **HTTP** al **servidor** enviando un método **GET** de solicitud.
  Este mismo busca la función de la dirección de recibió, la ejecuta armando así el **HTML** correspondiente que mostrará el **servidor**.
